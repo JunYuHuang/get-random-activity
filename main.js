@@ -4,7 +4,7 @@ document.getElementById('button-get-new-word').addEventListener('click', loadAct
 
 function loadActivity() {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://www.boredapi.com/api/activity/');
+    xhr.open('GET', 'https://www.boredapi.com/api/activity/');
     xhr.onload = function() {
         if(this.status == 200) {
             var retrievedActivity = JSON.parse(this.responseText);

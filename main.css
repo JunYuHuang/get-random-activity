@@ -64,22 +64,24 @@ nav a:hover {
 .wrapper {
     height: calc(100vh - 4rem);
     margin: 0 auto;
-    /* background-color: blue; */
 }
 
 #activity-phrase {
-    /* color: #d2ddef; */
-    /* background-color: green; */
     min-height: calc(100vh - 4rem);
-    font-size: 5rem;
+    font-size: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: 0.3s;
 }
 
 @media only screen and (min-width: 490px) {
     .main-width-scaler {
         width: 67%;
+    }
+
+    #activity-phrase {
+        font-size: 5rem;
     }
 }
 
