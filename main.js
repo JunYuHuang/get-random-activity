@@ -1,3 +1,5 @@
+loadActivity();
+
 document.getElementById('button-get-new-word').addEventListener('click', loadActivity);
 
 function setBackgroundImage(elementId, imageURL) {
