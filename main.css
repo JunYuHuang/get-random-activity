@@ -61,32 +61,47 @@ nav a:hover {
     flex: 1;
 }
 
-.wrapper {
-    height: calc(100vh - 4rem);
-    margin: 0 auto;
+#activity-image {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-#activity-phrase {
-    min-height: calc(100vh - 4rem);
-    font-size: 2rem;
+.wrapper {
+    min-height: calc(100vh - 4em);
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: 0.3s;
 }
 
-@media only screen and (min-width: 490px) {
+#activity-phrase {
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.9);
+    box-sizing: content-box;
+    overflow-wrap: anywhere;
+}
+
+@media only screen and (min-width: 700px) {
     .main-width-scaler {
         width: 67%;
     }
 
     #activity-phrase {
-        font-size: 5rem;
+        font-size: 3.5rem;
+        padding: 1.75rem;
     }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
     .main-width-scaler {
         width: 50%;
+    }
+
+    #activity-phrase {
+        font-size: 5rem;
+        padding: 2.5rem;
     }
 }
