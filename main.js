@@ -6,6 +6,11 @@ function setBackgroundImage(elementId, imageURL) {
     document.getElementById(elementId).style.backgroundImage = 'url(' + imageURL + ')';
 }
 
+function fadeElement(elementId) { 
+    document.getElementById(elementId).classList.remove('effect-fade-in');
+    document.getElementById(elementId).classList.add('effect-fade-in');
+}
+
 var APIKeyString = '';
 fetch('./unsplashAPIKey.txt')
 .then(response => response.text())
@@ -20,11 +25,11 @@ function loadActivity() {
     xhr.onload = function() {
         if(this.status == 200) {
             var activityText = JSON.parse(this.responseText);
-            var activityTextOutput = '';
-            activityTextOutput += activityText.activity + '.';
+            var activityTextOutput = '' + activityText.activity;
+
             // display the activity text phrase
             document.getElementById('activity-phrase').innerHTML = activityTextOutput;
-
+            
             // get random photo related to text phrase from unsplash api
             var xhr2 = new XMLHttpRequest();
             xhr2.open('GET', 'https://api.unsplash.com/photos/random?client_id=' + APIKeyString + '&query=' + activityText.activity);
