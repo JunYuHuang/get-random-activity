@@ -6,11 +6,6 @@ function setBackgroundImage(elementId, imageURL) {
     document.getElementById(elementId).style.backgroundImage = 'url(' + imageURL + ')';
 }
 
-function fadeElement(elementId) { 
-    document.getElementById(elementId).classList.remove('effect-fade-in');
-    document.getElementById(elementId).classList.add('effect-fade-in');
-}
-
 var APIKeyString = '';
 fetch('./unsplashAPIKey.txt')
 .then(response => response.text())
